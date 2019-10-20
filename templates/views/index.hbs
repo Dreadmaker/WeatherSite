@@ -3,23 +3,23 @@
 <html>
 
 <head>
-    <title>Hacker Weather - Home</title>
+    <title>Perfectly Normal Weather - Home</title>
     <link rel="icon" href="/img/HW_icon.png">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalStyle.css">
 </head>
 
 <body>
     <div class="main-content">
         {{>header}}
-        <p>I'm in ur city stealin ur weather</p>
-
-        <form>
+        <div class="center">
+            <p>A perfectly normal place to get perfectly normal weather.</p>
+            <form>
             <input placeholder="Location">
             <button>
-                Hack your Weather
+                Find Forecast
             </button>
         </form>
-
+        
         <p id="message-1"></p>
 
         <p id="message-2"></p>
@@ -27,6 +27,10 @@
         <p id="message-3"></p>
 
         <p id="message-4"></p>
+        </div>
+        
+
+
 
 
     </div>

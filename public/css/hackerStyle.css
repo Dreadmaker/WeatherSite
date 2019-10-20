@@ -1,0 +1,62 @@
+body {
+    color: #00FF41;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 16px;
+    background: #000000;
+    background-image: url("/img/rainingBits.gif");
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-content{
+    flex-grow: 1;
+}
+footer {
+    color: #003B00;
+    border-top: 1px solid #008F11;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+header {
+    margin-top: 16px;
+    margin-bottom: 48x;
+}
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+header a {
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.portrait {
+    width: 500px;
+}
+
+.rightAligned {
+    float: right;
+    width: 200px;
+
+}
+
+
+input {
+    border: 1px solid #0D0208;
+    padding: 8px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #0D0208;
+    background: rgb(44, 41, 43);
+    color:  white;
+    padding: 8px;
+    font-family: 'Courier New', Courier, monospace;
+}

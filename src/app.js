@@ -24,7 +24,7 @@ app.use(express.static(publicPath));
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather',
+        title: 'Normal Weather',
         name: 'Jordan Burrows'
     })
 
@@ -32,7 +32,7 @@ app.get('', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'This is an About page',
+        title: 'About',
         name: 'Jordan Burrows'
     })
 
