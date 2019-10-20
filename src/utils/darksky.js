@@ -21,10 +21,10 @@ const forecast = (lat, long, callback) => {
                 currentSummary: body.daily.summary,
                 currentPrecipType: body.daily.data[0].precipType,
                 dailySummary: body.daily.data[0].summary
-            })
+            });
         }
-    })
+    });
 
 }
 
-module.exports = forecast
+module.exports = forecast;

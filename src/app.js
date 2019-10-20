@@ -26,7 +26,7 @@ app.get('', (req, res) => {
     res.render('index', {
         title: 'Normal Weather',
         name: 'Jordan Burrows'
-    })
+    });
 
 });
 
@@ -34,7 +34,7 @@ app.get('/1337', (req, res) => {
     res.render('1337', {
         title: 'Hacker Weather',
         name: 'Jordan Burrows'
-    })
+    });
 
 });
 
@@ -42,7 +42,7 @@ app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About',
         name: 'Jordan Burrows'
-    })
+    });
 
 });
 
@@ -50,7 +50,7 @@ app.get('/weather', (req, res) => {
     if(!req.query.address) {
         return res.send({
             error: 'you must provide a search term!'
-        })
+        });
 
     }
     geocode(req.query.address, (error, {latitude, longitude, location} = {}) => {
@@ -70,7 +70,7 @@ app.get('/weather', (req, res) => {
                 Summary: currentSummary,
                 temperature: 'Today\'s forecast: ' + dailySummary +' It is currently ' + currentTemperature + ' degrees outside.',
                 precipProbability: 'There is a ' + currentPrecipProbability*100 + '% chance of ' + currentPrecipType +'.'
-            })
+            });
           });
     });
 });
@@ -79,7 +79,7 @@ app.get('/products', (req, res) => {
     if(!req.query.search) {
         return res.send({
             error: 'you must provide a search term'
-        })
+        });
 
     }
     console.log(req.query.search)

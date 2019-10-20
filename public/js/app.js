@@ -13,10 +13,10 @@ weatherForm.addEventListener('submit', (e) => {
 
     const location = search.value;
 
-    messageOne.textContent = 'Thinking real hard...'
-    messageTwo.textContent = ''
-    messageThree.textContent = ''
-    messageFour.textContent = ''
+    messageOne.textContent = 'Thinking real hard...';
+    messageTwo.textContent = '';
+    messageThree.textContent = '';
+    messageFour.textContent = '';
 
     fetch('/weather?address='+ location).then ((response) => {
         response.json().then((data) => {
@@ -33,4 +33,4 @@ weatherForm.addEventListener('submit', (e) => {
         });
     });
 
-})
+});
