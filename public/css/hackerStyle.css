@@ -3,7 +3,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     max-width: 1920px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 0;
     background: #000000;
     background-image: url("/img/rainingBits.gif");
 
@@ -16,17 +16,18 @@ body {
 }
 footer {
     color: #003B00;
-    border-top: 1px solid #008F11;
     margin-top: 16px;
     padding: 16px 0;
 }
 header {
-    margin-top: 16px;
-    margin-bottom: 48x;
+    margin-top: 150px;
+    margin-bottom: 16px;
+    padding: 0 16px;
 }
 h1 {
-    font-size: 64px;
+    font-size: 96px;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 header a {
@@ -38,10 +39,24 @@ header a {
     width: 500px;
 }
 
-.rightAligned {
-    float: right;
-    width: 200px;
+.bottom {
+    display: flex;
+    justify-content: space-between;
 
+}
+
+.rightAligned {
+    margin-right: 6px;
+
+}
+.leftAligned {
+
+    margin-left: 6px;
+
+}
+
+.center {
+    text-align: center;
 }
 
 

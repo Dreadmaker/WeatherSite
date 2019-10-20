@@ -30,6 +30,14 @@ app.get('', (req, res) => {
 
 });
 
+app.get('/1337', (req, res) => {
+    res.render('1337', {
+        title: 'Hacker Weather',
+        name: 'Jordan Burrows'
+    })
+
+});
+
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About',
@@ -38,19 +46,10 @@ app.get('/about', (req, res) => {
 
 });
 
-app.get('/help', (req, res) => {
-    res.render('help', {
-        title: 'Help',
-        message: 'Turn it off, then turn it back on again.',
-        name: 'Jordan Burrows'
-    })
-
-});
-
 app.get('/weather', (req, res) => {
     if(!req.query.address) {
         return res.send({
-            error: 'you must provide a search term'
+            error: 'you must provide a search term!'
         })
 
     }
@@ -59,7 +58,7 @@ app.get('/weather', (req, res) => {
            return res.send({ error });
         }
     
-        forecast(latitude, longitude, (error, {currentSummary, currentTemperature, currentPrecipProbability} = {}) => {
+        forecast(latitude, longitude, (error, {currentSummary, currentTemperature, currentPrecipProbability, currentPrecipType, dailySummary} = {}) => {
     
             if (error)
             {
@@ -69,8 +68,8 @@ app.get('/weather', (req, res) => {
             res.send({
                 currentWeather: 'Current weather data for ' + location + ':',
                 Summary: currentSummary,
-                temperature: 'It is currently ' + currentTemperature + ' degrees outside.',
-                precipProbability: 'There is a ' + currentPrecipProbability + '% chance of rain.'
+                temperature: 'Today\'s forecast: ' + dailySummary +' It is currently ' + currentTemperature + ' degrees outside.',
+                precipProbability: 'There is a ' + currentPrecipProbability*100 + '% chance of ' + currentPrecipType +'.'
             })
           });
     });
